@@ -1,0 +1,5 @@
+template_path: security-groups.py
+
+parameters:
+  RunnerVpc: {{ var.runner_vpc }} 
+  RunnerAllowedIp: {{ var.runner_allowed_ip }}

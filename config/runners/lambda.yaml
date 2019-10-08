@@ -1,0 +1,5 @@
+template_path: lambda.py
+
+parameters:
+  RunnerLambdaHandler: index.handler
+  RunnerLambdaRuntime: python3.7 

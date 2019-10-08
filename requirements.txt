@@ -1,0 +1,6 @@
+troposphere~=2.5.1
+sceptre~=2.2.1
+cfn-flip~=1.2.1
+awacs~=0.9.6
+awscli
+

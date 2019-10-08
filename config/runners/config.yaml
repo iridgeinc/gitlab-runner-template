@@ -1,0 +1,2 @@
+project_code: gitlab-runner
+region: {{ var.runner_region }}

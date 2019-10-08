@@ -1,0 +1,16 @@
+template_path: asg.py
+
+parameters:
+  RunnerSubnets: {{ var.runner_subnets }}
+  RunnerSecurityGroup: !stack_output runners/security-groups.yaml::RunnerSecurityGroup
+  RunnerAmiId: {{ var.runner_ami_id }}
+  RunnerServerInstanceType: {{ var.runner_instance_type }}
+  RunnerKeyPair: {{ var.runner_key_pair }}
+  RunnerDesiredCount: "{{ var.runner_desired_count }}"
+  RunnerMinCount: "{{ var.runner_min_count }}"
+  RunnerMaxCount: "{{ var.runner_max_count }}"
+  RunnerJobConcurrency: "{{ var.runner_job_concurrency }}"
+  RunnerTagList: {{ var.runner_tag_list }}
+  RunnerRegisterToken: {{ var.runner_register_token }}
+  RunnerGitlabUrl: {{ var.runner_gitlab_url }}
+  RunnerVolumeSize: "{{ var.runner_volume_size }}"
