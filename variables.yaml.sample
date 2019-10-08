@@ -1,0 +1,23 @@
+runner_region: ap-northeast-1
+
+runner_vpc: <vpc id>
+runner_allowed_ip: <source ip cidr to allow>
+
+runner_ami_id: ami-0a3ca415c97ce604b
+runner_instance_type: t2.medium
+runner_key_pair: <key pair name>
+runner_desired_count: 1
+runner_min_count: 1
+runner_max_count: 4
+runner_subnets: <comma separated subnet ids>
+
+runner_job_concurrency: 2
+runner_tag_list: <comma separated runners tags>
+runner_register_token: <token of registration>
+runner_gitlab_url: https://gitlab.com
+runner_volume_size: 100
+runner_scalein_threshold: 10
+runner_scaleout_threshold: 90
+runner_scalein_cooldown: 300
+runner_scaleout_cooldown: 300
+

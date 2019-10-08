@@ -1,0 +1,8 @@
+template_path: scaling.py
+
+parameters:
+  RunnerAutoscalingGroup: !stack_output runners/asg.yaml::RunnerAutoscalingGroup
+  RunnerScaleinThreshold: "{{ var.runner_scalein_threshold }}"
+  RunnerScaleoutThreshold: "{{ var.runner_scaleout_threshold }}"
+  RunnerScaleinCooldown: "{{ var.runner_scalein_cooldown }}"
+  RunnerScaleoutCooldown: "{{ var.runner_scaleout_cooldown }}"

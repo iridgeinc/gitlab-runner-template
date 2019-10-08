@@ -1,0 +1,7 @@
+template_path: lifecyclehook.py
+
+parameters:
+  RunnerAutoscalingGroup: !stack_output runners/asg.yaml::RunnerAutoscalingGroup
+  RunnerUnregisterFunction: !stack_output runners/lambda.yaml::RunnerUnregisterFunction 
+  RunnerUnregisterFunctionArn: !stack_output runners/lambda.yaml::RunnerUnregisterFunctionArn 
+  RunnerTerminateTargetId: "1"

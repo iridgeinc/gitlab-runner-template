@@ -1,0 +1,18 @@
+stages:
+  - test
+
+.test_template: &test_definition
+  stage: test
+  image: python:3.7
+  before_script:
+    - pip install -r requirements/dev.txt
+  except:
+    - tags
+
+qualities:
+  <<: *test_definition
+  script:
+    - black --check . 
+    - flake8 .
+    - mypy --config-file ./setup.cfg .
+
