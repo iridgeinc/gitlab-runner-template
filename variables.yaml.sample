@@ -11,6 +11,7 @@ runner_min_count: 1
 runner_max_count: 4
 runner_subnets: <comma separated subnet ids>
 
+runner_version: latest
 runner_job_concurrency: 2
 runner_tag_list: <comma separated runners tags>
 runner_register_token: <token of registration>

@@ -29,6 +29,7 @@ $ cp variables.yaml.sample variables.yaml
 | runner_min_count| minimum count of runner|
 | runner_max_count| maximum count of runner|
 | runner_subnets| comma separated subnet ids to which runner belongs|
+| runner_version | the version of gitlab runner |
 | runner_job_concurrency| the count of jobs which runner execute in parallel (0 means infinity)|
 | runner_tag_list| comma separated tags of runner|
 | runner_register_token| the token to register runner into gitlab|
