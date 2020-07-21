@@ -85,6 +85,10 @@ class RunnerAsg:
             )
         )
 
+        self.runner_version = self.template.add_parameter(
+            Parameter("RunnerVersion", Description="runner_version", Type="String")
+        )
+
     def add_resources(self):
         self.runner_ssm_role = self.template.add_resource(
             Role(
@@ -130,8 +134,9 @@ class RunnerAsg:
                             "####install runner####\n",
                             "yum install -y wget\n",
                             "wget -O /usr/local/bin/gitlab-runner ",
-                            "https://gitlab-runner-downloads.s3.amazonaws.com",
-                            "/latest/binaries/gitlab-runner-linux-amd64\n",
+                            "https://gitlab-runner-downloads.s3.amazonaws.com/v",
+                            Ref(self.runner_version),
+                            "/binaries/gitlab-runner-linux-amd64\n",
                             "ln -s /usr/local/bin/gitlab-runner ",
                             "/usr/bin/gitlab-runner\n",
                             "chmod +x /usr/local/bin/gitlab-runner\n",
@@ -155,7 +160,7 @@ class RunnerAsg:
                             "--registration-token=",
                             Ref(self.runner_register_token),
                             " ",
-                            "--run-untagged ",
+                            "--run-untagged=true ",
                             "--locked=false ",
                             "--url=",
                             Ref(self.runner_gitlab_url),

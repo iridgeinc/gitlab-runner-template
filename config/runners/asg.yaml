@@ -14,3 +14,4 @@ parameters:
   RunnerRegisterToken: {{ var.runner_register_token }}
   RunnerGitlabUrl: {{ var.runner_gitlab_url }}
   RunnerVolumeSize: "{{ var.runner_volume_size }}"
+  RunnerVersion: "{{ var.runner_version }}"
