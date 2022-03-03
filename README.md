@@ -1,4 +1,6 @@
-# GitLab Runner AutoscalingGroup
+# (Outdated) GitLab Runner AutoscalingGroup
+*** This repository is outdated and not be maintenanced. ***
+
 By using this repository, you can deploy gitlab runner autoscaling group in your aws account. **This repository is featured on the iRidge Developer Blog!** [here!](https://iridge-tech.hatenablog.com/entry/gitlab-runner-deploy)
 
 ## Usage
